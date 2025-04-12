@@ -4,7 +4,7 @@ This is a machine learning workflow, from data preprocessing to training, evalua
 * The **Zooming In** technique is a strategy where you refine the hyperparameter search space iteratively. Starting with a broad search space you perform an initial search (using GridSearchCV for example) to identify promising regions of the space. Then, in subsequent iterations, you narrow the range of hyperparameters (Zoom In) around the best-performing values from the previous step and search again. This approach balances exploration (finding promising regions) and exploitation (fine-tuning within those regions).
 * **Bayesian Optimization** is a sequential optimization technique that efficiently finds the best hyperparameters by building a probabilistic model of the objective function and then selecting the promising hyperparameters. To Implement it, i'm going to use a technique called Tree-structured Parzen Estimators (TPE). Instead of modeling the objective function directly, TPE builds two probability distribution, one for good hyperparameters and another one for bad hyperparameters.
 
-## Notebook's Table of content
+# Notebook's Table of content
 
 #### Part 1: Data Preprocessing
 - Step 1: Load and Inspect Data
@@ -26,4 +26,14 @@ This is a machine learning workflow, from data preprocessing to training, evalua
 - Step 3: Model Evaluation
 - Step 4: Making Predictions
 
-## Key Insights
+# Key Insights
+## Classification: Titanic Survival Prediction
+#### ✅ Best Performing Model
+**AdaBoostClassifier** achieved the highest accuracy (~76%), outperforming Logistic Regression, KNN, Decision Tree and SVC
+#### 🔍 Hyperparameter Tuning Impact
+Adjusting `n_estimators` and `learning_rate` in **AdaBoostClassifier** improved accuracy by ~1.5% compared to initial settings.
+#### 📊 Key Features Influencing Survival
+**Age** and **Fare** were the two most important features with respectively **25.9%** and **24.56%** of Importance 
+
+---
+## Regression: House Price Prediction
