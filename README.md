@@ -37,3 +37,13 @@ Adjusting `n_estimators` and `learning_rate` in **AdaBoostClassifier** improved 
 
 ---
 ## Regression: House Price Prediction
+#### ✅ Best Performing Model
+**SVR**(Optimized using Bayesian Optimization) achieved the highest accuracy (~99.96%), outperforming RandomForestRegressor, MLPRegressor and Linear Regression
+#### 🔍 SVR Hyperparameter Importance
+While optimizing the SVR model, **gamma** and **epsilon** are the most influential hyperparameters affecting model performance
+![](asset/SVR_Hyp_BOp.png)
+#### 📊 Key Features Influencing Survival
+**Year** and **Mileage** were the two most important features with respectively **40.78%** and **28.59%** of Importance 
+
+---
+## Zooming In vs. Bayesian Optimization
